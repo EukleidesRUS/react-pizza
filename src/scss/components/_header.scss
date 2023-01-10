@@ -1,4 +1,4 @@
-@import 'variables';
+@import '../variables';
 
 .header {
   border-bottom: 1px solid $gray-line;
@@ -8,11 +8,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 645px) {
+      flex-direction: column;
+
+      .header__basket {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__logo {
     display: flex;
-
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      opacity: 0.85;
+    }
     img {
       margin-right: 15px;
     }
