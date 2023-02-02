@@ -1,7 +1,7 @@
 import React from "react";
 import Categories from "./components/Categories/Categories";
 import Sort from "./components/Sort/Sort";
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 import "./scss/app.scss";
 
 
