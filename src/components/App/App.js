@@ -1,9 +1,9 @@
 import React from "react";
-import Categories from "./components/categories/Categories";
-import Sort from "./components/Sort/Sort";
-import Header from "./components/header/Header";
-import "./scss/app.scss";
-import PizzaBlock from "./components/pizza-block/PizzaBlock";
+import Categories from "../categories/Categories";
+import Sort from "../Sort/Sort";
+import Header from "../header/Header";
+import "../../scss/app.scss";
+import PizzaBlock from "../pizza-block/PizzaBlock";
 
 function App() {
   return (

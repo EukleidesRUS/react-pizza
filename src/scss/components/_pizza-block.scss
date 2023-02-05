@@ -1,7 +1,18 @@
 @import '../variables';
 
+.pizzas-container {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(4, minmax(160px, 280px));
+  gap: 56px;
+}
+
 .pizza-block {
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 280px;
+  width: 100%;
   text-align: center;
   margin-bottom: 65px;
   transition: all 0.2s ease-in-out;
@@ -16,7 +27,8 @@
   }
 
   &__image {
-    width: 260px;
+    max-width: 260px;
+    width: 100%;
   }
 
   &__title {
@@ -28,6 +40,7 @@
 
   &__selector {
     display: flex;
+    width: 100%;
     background-color: #ddddddad;
     border-radius: 10px;
     flex-direction: column;
