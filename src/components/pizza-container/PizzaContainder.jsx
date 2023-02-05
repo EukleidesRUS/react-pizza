@@ -7,7 +7,7 @@ const PizzaContainder = ({ pizzasObj }) => {
   return (
     <ul className="pizzas-container">
       {pizzas.map((pizza) => (
-        <PizzaBlock pizza={pizza} />
+        <PizzaBlock pizza={pizza} key={pizza.id}/>
       ))}
     </ul>
   );

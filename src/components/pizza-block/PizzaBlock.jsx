@@ -4,7 +4,10 @@ import { PlusIcon } from "../Icons/Plus";
 
 const PizzaBlock = ({ pizza }) => {
   const [pizzaCount, setPizzaCount] = useState(0);
-  
+  const [activeType, setActiveType] = useState(pizza.types[0]);
+  const [sizeState, setSizeState] = useState(26);
+  const typeNames = ["тонкое", "традиционное"];
+
   return (
     pizza && (
       <li className="pizza-block">
@@ -16,13 +19,26 @@ const PizzaBlock = ({ pizza }) => {
         <h4 className="pizza-block__title">{pizza.name}</h4>
         <div className="pizza-block__selector">
           <ul>
-            <li className="active">тонкое</li>
-            <li>традиционное</li>
+            {pizza.types.map((typeId) => (
+              <li
+                onClick={() => setActiveType(typeId)}
+                className={activeType === typeId ? "active" : ""}
+                key={typeId}
+              >
+                {typeNames[typeId]}
+              </li>
+            ))}
           </ul>
           <ul>
-            {pizza.sizes.map((size) => {
-              return <li className="">{size} см.</li>;
-            })}
+            {pizza.sizes.map((size) => (
+              <li
+                onClick={() => setSizeState(size)}
+                className={sizeState === size ? "active" : ""}
+                key={size}
+              >
+                {size} см.
+              </li>
+            ))}
           </ul>
         </div>
         <div className="pizza-block__bottom">
