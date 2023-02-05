@@ -4,7 +4,7 @@ import { PlusIcon } from "../Icons/Plus";
 
 const PizzaBlock = ({ pizza }) => {
   const [pizzaCount, setPizzaCount] = useState(0);
-
+  
   return (
     pizza && (
       <li className="pizza-block">
@@ -20,9 +20,9 @@ const PizzaBlock = ({ pizza }) => {
             <li>традиционное</li>
           </ul>
           <ul>
-            <li className="active">26 см.</li>
-            <li>30 см.</li>
-            <li>40 см.</li>
+            {pizza.sizes.map((size) => {
+              return <li className="">{size} см.</li>;
+            })}
           </ul>
         </div>
         <div className="pizza-block__bottom">
