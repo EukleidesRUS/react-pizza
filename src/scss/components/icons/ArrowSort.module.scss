@@ -1,0 +1,7 @@
+.arrow-sort{
+  transition: transform 0.2s linear;
+}
+
+.arrow-sort.open {
+  transform: rotate(180deg);
+}

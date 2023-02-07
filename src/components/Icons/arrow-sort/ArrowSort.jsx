@@ -1,8 +1,9 @@
 import React from 'react'
 
-const ArrowSort = () => {
+const ArrowSort = ({isOpen}) => {
   return (
     <svg
+      className={!isOpen ? "arrow-sort open" : "arrow-sort"}
       width="10"
       height="6"
       viewBox="0 0 10 6"
