@@ -1,6 +1,6 @@
 import React from "react";
 import Categories from "../categories/Categories";
-import Sort from "../Sort/Sort";
+import Sort from "../sort/Sort";
 import Header from "../header/Header";
 import "../../scss/app.scss";
 import pizzasObj from "../../assets/pizzas.json";
