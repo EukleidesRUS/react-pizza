@@ -20,7 +20,7 @@ const Categories = () => {
             <li
               onClick={() => setActiveIndex(index)}
               className={activeIndex === index ? "active" : ""}
-              key={index}
+              key={value}
             >
               {value}
             </li>
