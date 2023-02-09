@@ -10,7 +10,7 @@ const PizzaContainder = () => {
       getPizzas()
         .then((arr) => setPizzas(arr))
         .catch((err) =>
-          console.log(`Не удалось загрузить список пицц ${err.message}`)
+          console.log(`Не удалось загрузить список пицц ${err}`)
         );
     }
   }, []);
