@@ -3,7 +3,6 @@ import Categories from "../categories/Categories";
 import Sort from "../sort/Sort";
 import Header from "../header/Header";
 import "../../scss/app.scss";
-import pizzasObj from "../../assets/pizzas.json";
 import PizzaContainder from "../pizza-container/PizzaContainder";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
             <Sort />
           </div>
           <h2 className="content__title">Все пиццы</h2>
-          <PizzaContainder pizzasObj={pizzasObj}/>
+          <PizzaContainder />
           <div className="content__items"></div>
         </div>
       </div>
