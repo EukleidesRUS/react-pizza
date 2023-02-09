@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getPizzas } from "../../utils/api/api";
 import PizzaBlock from "../pizza-block/PizzaBlock";
 
-const PizzaContainder = ({ pizzasObj }) => {
-  const { pizzas } = pizzasObj;
+const PizzaContainder = () => {
+  const [pizzas, setPizzas] = useState(null);
+
+  useEffect(() => {
+    if (!pizzas) {
+      getPizzas()
+        .then((arr) => setPizzas(arr))
+        .catch((err) =>
+          console.log(`Не удалось загрузить список пицц ${err.message}`)
+        );
+    }
+  }, []);
 
   return (
     <ul className="pizzas-container">
-      {pizzas.map((pizza) => (
-        <PizzaBlock pizza={pizza} key={pizza.id}/>
-      ))}
+      {pizzas &&
+        pizzas.map((pizza) => <PizzaBlock pizza={pizza} key={pizza.id} />)}
     </ul>
   );
 };
